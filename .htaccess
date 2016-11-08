@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteRule ^(.*)/web/(.*) /web/$2 [R=301,L]
+RewriteRule ^(.*)/api/(.*) /api/$2 [R=301,L]
+RewriteRule ^(.*)/dashboard.html(.*) /dashboard.html$2 [R=301,L]
+RewriteRule ^(Lib|dashboard.html)($|/) - [L]
+RewriteRule ^(.*)$ index.php?do=$1 [QSA,L,NC]
